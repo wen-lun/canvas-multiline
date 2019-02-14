@@ -1,0 +1,41 @@
+{
+  "name": "canvas-multiline",
+  "version": "1.0.0",
+  "description": "为canvas ctx扩展多行文本的绘制，支持对英文单词的宽度进行的解析",
+  "main": "./dist/canvas-multiline.js",
+  "types": "types/canvas-multiline.d.ts",
+  "files": [
+    "dist",
+    "types",
+    "src"
+  ],
+  "scripts": {
+    "uglifyjs": "uglifyjs dist/canvas-multiline.js -o dist/canvas-multiline.min.js",
+    "build": "tsc & npm run uglifyjs",
+    "release": "npm run build & npm publish"
+  },
+  "keywords": [
+    "canvas",
+    "text",
+    "multiline",
+    "canvas-multiline-text",
+    "canvas ext",
+    "canvas-ext-multiline",
+    "canvas extend",
+    "多行文本"
+  ],
+  "author": "wenlun",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.2.2",
+    "uglify-js": "^3.4.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/destiny-wenlun/canvas-multiline.git"
+  },
+  "bugs": {
+    "url": "https://github.com/destiny-wenlun/canvas-multiline/issues"
+  },
+  "homepage": "https://github.com/destiny-wenlun/canvas-multiline#readme"
+}
