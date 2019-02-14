@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>栗子</title>
+    <style>
+        canvas {
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="demo"></canvas>
+    <script src="../dist/canvas-multiline.min.js"></script>
+    <script>
+        var canvas = document.querySelector("#demo");
+        var ctx = canvas.getContext("2d");
+
+        //1、画起点坐标为(10,10) 终点坐标为(80,100)的黑色箭头
+        ctx.beginPath();
+        ctx.save();
+        ctx.font = "18px Arial";
+        ctx.textBaseline = "top";
+        let text = `Her voice was so sweet as it broke the hypnotic trance we were all caught in, "Mom, let's run through the rain." she said.`;
+        ctx.strokeRect(0, 0, 160, 500);
+        ctx.fillMultilineText(text, 0, 0, 160);
+        ctx.restore();
+    </script>
+</body>
+
+</html>
